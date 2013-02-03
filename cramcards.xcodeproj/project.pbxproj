@@ -1,0 +1,740 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A324E99616B1F25D006E4A05 /* CCDatabaseInterface.m in Sources */ = {isa = PBXBuildFile; fileRef = A324E99516B1F25D006E4A05 /* CCDatabaseInterface.m */; };
+		A324E9A316B1F391006E4A05 /* CCDeckFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = A324E9A216B1F391006E4A05 /* CCDeckFactory.m */; };
+		A324E9B316B1FA24006E4A05 /* Card.m in Sources */ = {isa = PBXBuildFile; fileRef = A324E9B216B1FA24006E4A05 /* Card.m */; };
+		A324E9B616B1FA25006E4A05 /* Side.m in Sources */ = {isa = PBXBuildFile; fileRef = A324E9B516B1FA25006E4A05 /* Side.m */; };
+		A324E9B916B1FA25006E4A05 /* Deck.m in Sources */ = {isa = PBXBuildFile; fileRef = A324E9B816B1FA25006E4A05 /* Deck.m */; };
+		A324E9BD16B200E3006E4A05 /* Deck+addSubitems.m in Sources */ = {isa = PBXBuildFile; fileRef = A324E9BC16B200E3006E4A05 /* Deck+addSubitems.m */; };
+		A324E9C016B20111006E4A05 /* Card+addSubitems.m in Sources */ = {isa = PBXBuildFile; fileRef = A324E9BF16B20111006E4A05 /* Card+addSubitems.m */; };
+		A3A8040F16B14BD100D5A90A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3A8040E16B14BD100D5A90A /* UIKit.framework */; };
+		A3A8041116B14BD100D5A90A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3A8041016B14BD100D5A90A /* Foundation.framework */; };
+		A3A8041316B14BD100D5A90A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3A8041216B14BD100D5A90A /* CoreGraphics.framework */; };
+		A3A8041516B14BD100D5A90A /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3A8041416B14BD100D5A90A /* CoreData.framework */; };
+		A3A8041B16B14BD100D5A90A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A3A8041916B14BD100D5A90A /* InfoPlist.strings */; };
+		A3A8041D16B14BD100D5A90A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A3A8041C16B14BD100D5A90A /* main.m */; };
+		A3A8042116B14BD100D5A90A /* CCAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A3A8042016B14BD100D5A90A /* CCAppDelegate.m */; };
+		A3A8042316B14BD200D5A90A /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = A3A8042216B14BD100D5A90A /* Default.png */; };
+		A3A8042516B14BD200D5A90A /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A3A8042416B14BD200D5A90A /* Default@2x.png */; };
+		A3A8042716B14BD200D5A90A /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A3A8042616B14BD200D5A90A /* Default-568h@2x.png */; };
+		A3A8042A16B14BD200D5A90A /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A3A8042816B14BD200D5A90A /* MainStoryboard.storyboard */; };
+		A3A8042D16B14BD200D5A90A /* cramcards.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A3A8042B16B14BD200D5A90A /* cramcards.xcdatamodeld */; };
+		A3A8043016B14BD200D5A90A /* CCMasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A3A8042F16B14BD200D5A90A /* CCMasterViewController.m */; };
+		A3A8043C16B14C3B00D5A90A /* CCCramSettingsTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A3A8043B16B14C3B00D5A90A /* CCCramSettingsTVC.m */; };
+		A3A8044316B1520900D5A90A /* CCServerInterface.m in Sources */ = {isa = PBXBuildFile; fileRef = A3A8044216B1520900D5A90A /* CCServerInterface.m */; };
+		A3A8044616B153CA00D5A90A /* NSDictionary+JSON.m in Sources */ = {isa = PBXBuildFile; fileRef = A3A8044516B153CA00D5A90A /* NSDictionary+JSON.m */; };
+		A3A8044A16B154C400D5A90A /* CCDeckTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A3A8044916B154C400D5A90A /* CCDeckTVC.m */; };
+		A3B8B01916B59663009AD785 /* UILabel+sizeToFit.m in Sources */ = {isa = PBXBuildFile; fileRef = A3B8B01816B59663009AD785 /* UILabel+sizeToFit.m */; };
+		A3B8B01C16B596D5009AD785 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3B8B01B16B596D5009AD785 /* QuartzCore.framework */; };
+		A3BB6EA216B2B3C300617B15 /* CCCramContainerVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A3BB6EA116B2B3C300617B15 /* CCCramContainerVC.m */; };
+		A3BB6EA916B2B40400617B15 /* CCCramCardVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A3BB6EA816B2B40400617B15 /* CCCramCardVC.m */; };
+		A3BB6EB016B2EC9000617B15 /* CCCardDataForShow.m in Sources */ = {isa = PBXBuildFile; fileRef = A3BB6EAF16B2EC9000617B15 /* CCCardDataForShow.m */; };
+		A3BB6EB416B2EE0600617B15 /* CCCardForShowFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = A3BB6EB316B2EE0600617B15 /* CCCardForShowFactory.m */; };
+		A3BB6EB816B46C6300617B15 /* CCSessionInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = A3BB6EB716B46C6300617B15 /* CCSessionInfo.m */; };
+		A3BB6EBC16B46D0A00617B15 /* CCCardDealer.m in Sources */ = {isa = PBXBuildFile; fileRef = A3BB6EBB16B46D0A00617B15 /* CCCardDealer.m */; };
+		A3CBF92116BD6D1000D9D766 /* CCOptionsTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A3CBF92016BD6D1000D9D766 /* CCOptionsTVC.m */; };
+		A3CBF92516BD77DB00D9D766 /* InAppPurchaseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A3CBF92416BD77DB00D9D766 /* InAppPurchaseManager.m */; };
+		A3CBF92716BD780300D9D766 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3CBF92616BD780200D9D766 /* StoreKit.framework */; };
+		A3CBF92A16BD78F400D9D766 /* SKProduct+LocalizedPrice.m in Sources */ = {isa = PBXBuildFile; fileRef = A3CBF92916BD78F400D9D766 /* SKProduct+LocalizedPrice.m */; };
+		A3CBF92E16BD81D600D9D766 /* CCInAppPurchaseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A3CBF92D16BD81D600D9D766 /* CCInAppPurchaseManager.m */; };
+		A3CBF93216BD839200D9D766 /* CCInAppPurchaseTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A3CBF93116BD839200D9D766 /* CCInAppPurchaseTVC.m */; };
+		A3CBF93616BDBFBF00D9D766 /* InAppPurchaseDetails.m in Sources */ = {isa = PBXBuildFile; fileRef = A3CBF93516BDBFBF00D9D766 /* InAppPurchaseDetails.m */; };
+		A3CBF93C16BDDAA400D9D766 /* NSData+base64Encoding.m in Sources */ = {isa = PBXBuildFile; fileRef = A3CBF93B16BDDAA400D9D766 /* NSData+base64Encoding.m */; };
+		A3CBF93F16BDED4B00D9D766 /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = A3CBF93E16BDED4B00D9D766 /* NSData+Base64.m */; };
+		A3CBF94216BDF21B00D9D766 /* NSDate+Compare.m in Sources */ = {isa = PBXBuildFile; fileRef = A3CBF94116BDF21B00D9D766 /* NSDate+Compare.m */; };
+		A3CD401516BB028500DCE3A8 /* UIView+addShadow.m in Sources */ = {isa = PBXBuildFile; fileRef = A3CD401416BB028500DCE3A8 /* UIView+addShadow.m */; };
+		A3CD401A16BB12B000DCE3A8 /* Icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = A3CD401816BB12B000DCE3A8 /* Icon-72.png */; };
+		A3CD401B16BB12B000DCE3A8 /* Icon-72@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A3CD401916BB12B000DCE3A8 /* Icon-72@2x.png */; };
+		A3CD402116BB12F800DCE3A8 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A3CD402016BB12F800DCE3A8 /* Icon@2x.png */; };
+		A3CD402316BB131F00DCE3A8 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = A3CD402216BB131F00DCE3A8 /* Icon.png */; };
+		A3CD402A16BB26BE00DCE3A8 /* CCAdBannerVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A3CD402916BB26BE00DCE3A8 /* CCAdBannerVC.m */; };
+		A3CD402C16BB2E3400DCE3A8 /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3CD402B16BB2E3400DCE3A8 /* iAd.framework */; };
+		A3FA0B5916B935D200436B10 /* CCAddDeckTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A3FA0B5816B935D200436B10 /* CCAddDeckTVC.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		A324E99416B1F25D006E4A05 /* CCDatabaseInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCDatabaseInterface.h; sourceTree = "<group>"; };
+		A324E99516B1F25D006E4A05 /* CCDatabaseInterface.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCDatabaseInterface.m; sourceTree = "<group>"; };
+		A324E9A116B1F391006E4A05 /* CCDeckFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCDeckFactory.h; sourceTree = "<group>"; };
+		A324E9A216B1F391006E4A05 /* CCDeckFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCDeckFactory.m; sourceTree = "<group>"; };
+		A324E9B116B1FA24006E4A05 /* Card.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Card.h; sourceTree = "<group>"; };
+		A324E9B216B1FA24006E4A05 /* Card.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Card.m; sourceTree = "<group>"; };
+		A324E9B416B1FA25006E4A05 /* Side.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Side.h; sourceTree = "<group>"; };
+		A324E9B516B1FA25006E4A05 /* Side.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Side.m; sourceTree = "<group>"; };
+		A324E9B716B1FA25006E4A05 /* Deck.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Deck.h; sourceTree = "<group>"; };
+		A324E9B816B1FA25006E4A05 /* Deck.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Deck.m; sourceTree = "<group>"; };
+		A324E9BB16B200E3006E4A05 /* Deck+addSubitems.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Deck+addSubitems.h"; sourceTree = "<group>"; };
+		A324E9BC16B200E3006E4A05 /* Deck+addSubitems.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Deck+addSubitems.m"; sourceTree = "<group>"; };
+		A324E9BE16B20111006E4A05 /* Card+addSubitems.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Card+addSubitems.h"; sourceTree = "<group>"; };
+		A324E9BF16B20111006E4A05 /* Card+addSubitems.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Card+addSubitems.m"; sourceTree = "<group>"; };
+		A3A8040A16B14BD100D5A90A /* Cram Cards.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Cram Cards.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A3A8040E16B14BD100D5A90A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		A3A8041016B14BD100D5A90A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		A3A8041216B14BD100D5A90A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		A3A8041416B14BD100D5A90A /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		A3A8041816B14BD100D5A90A /* cramcards-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "cramcards-Info.plist"; sourceTree = "<group>"; };
+		A3A8041A16B14BD100D5A90A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		A3A8041C16B14BD100D5A90A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		A3A8041E16B14BD100D5A90A /* cramcards-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "cramcards-Prefix.pch"; sourceTree = "<group>"; };
+		A3A8041F16B14BD100D5A90A /* CCAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CCAppDelegate.h; sourceTree = "<group>"; };
+		A3A8042016B14BD100D5A90A /* CCAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CCAppDelegate.m; sourceTree = "<group>"; };
+		A3A8042216B14BD100D5A90A /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		A3A8042416B14BD200D5A90A /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		A3A8042616B14BD200D5A90A /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		A3A8042916B14BD200D5A90A /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
+		A3A8042C16B14BD200D5A90A /* cramcards.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = cramcards.xcdatamodel; sourceTree = "<group>"; };
+		A3A8042E16B14BD200D5A90A /* CCMasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CCMasterViewController.h; sourceTree = "<group>"; };
+		A3A8042F16B14BD200D5A90A /* CCMasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CCMasterViewController.m; sourceTree = "<group>"; };
+		A3A8043A16B14C3B00D5A90A /* CCCramSettingsTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCCramSettingsTVC.h; sourceTree = "<group>"; };
+		A3A8043B16B14C3B00D5A90A /* CCCramSettingsTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCCramSettingsTVC.m; sourceTree = "<group>"; };
+		A3A8044116B1520900D5A90A /* CCServerInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCServerInterface.h; sourceTree = "<group>"; };
+		A3A8044216B1520900D5A90A /* CCServerInterface.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCServerInterface.m; sourceTree = "<group>"; };
+		A3A8044416B153CA00D5A90A /* NSDictionary+JSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+JSON.h"; sourceTree = "<group>"; };
+		A3A8044516B153CA00D5A90A /* NSDictionary+JSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+JSON.m"; sourceTree = "<group>"; };
+		A3A8044816B154C400D5A90A /* CCDeckTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCDeckTVC.h; path = ../CCDeckTVC.h; sourceTree = "<group>"; };
+		A3A8044916B154C400D5A90A /* CCDeckTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCDeckTVC.m; path = ../CCDeckTVC.m; sourceTree = "<group>"; };
+		A3B8B01716B59663009AD785 /* UILabel+sizeToFit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+sizeToFit.h"; sourceTree = "<group>"; };
+		A3B8B01816B59663009AD785 /* UILabel+sizeToFit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+sizeToFit.m"; sourceTree = "<group>"; };
+		A3B8B01B16B596D5009AD785 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		A3BB6EA016B2B3C300617B15 /* CCCramContainerVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCCramContainerVC.h; sourceTree = "<group>"; };
+		A3BB6EA116B2B3C300617B15 /* CCCramContainerVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCCramContainerVC.m; sourceTree = "<group>"; };
+		A3BB6EA716B2B40400617B15 /* CCCramCardVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCCramCardVC.h; sourceTree = "<group>"; };
+		A3BB6EA816B2B40400617B15 /* CCCramCardVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCCramCardVC.m; sourceTree = "<group>"; };
+		A3BB6EAE16B2EC9000617B15 /* CCCardDataForShow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCCardDataForShow.h; sourceTree = "<group>"; };
+		A3BB6EAF16B2EC9000617B15 /* CCCardDataForShow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCCardDataForShow.m; sourceTree = "<group>"; };
+		A3BB6EB216B2EE0600617B15 /* CCCardForShowFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCCardForShowFactory.h; sourceTree = "<group>"; };
+		A3BB6EB316B2EE0600617B15 /* CCCardForShowFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCCardForShowFactory.m; sourceTree = "<group>"; };
+		A3BB6EB616B46C6300617B15 /* CCSessionInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCSessionInfo.h; sourceTree = "<group>"; };
+		A3BB6EB716B46C6300617B15 /* CCSessionInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCSessionInfo.m; sourceTree = "<group>"; };
+		A3BB6EBA16B46D0A00617B15 /* CCCardDealer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCCardDealer.h; sourceTree = "<group>"; };
+		A3BB6EBB16B46D0A00617B15 /* CCCardDealer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCCardDealer.m; sourceTree = "<group>"; };
+		A3CBF91F16BD6D1000D9D766 /* CCOptionsTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCOptionsTVC.h; sourceTree = "<group>"; };
+		A3CBF92016BD6D1000D9D766 /* CCOptionsTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCOptionsTVC.m; sourceTree = "<group>"; };
+		A3CBF92316BD77DB00D9D766 /* InAppPurchaseManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InAppPurchaseManager.h; sourceTree = "<group>"; };
+		A3CBF92416BD77DB00D9D766 /* InAppPurchaseManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InAppPurchaseManager.m; sourceTree = "<group>"; };
+		A3CBF92616BD780200D9D766 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		A3CBF92816BD78F400D9D766 /* SKProduct+LocalizedPrice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SKProduct+LocalizedPrice.h"; sourceTree = "<group>"; };
+		A3CBF92916BD78F400D9D766 /* SKProduct+LocalizedPrice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SKProduct+LocalizedPrice.m"; sourceTree = "<group>"; };
+		A3CBF92C16BD81D600D9D766 /* CCInAppPurchaseManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCInAppPurchaseManager.h; sourceTree = "<group>"; };
+		A3CBF92D16BD81D600D9D766 /* CCInAppPurchaseManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCInAppPurchaseManager.m; sourceTree = "<group>"; };
+		A3CBF93016BD839200D9D766 /* CCInAppPurchaseTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCInAppPurchaseTVC.h; sourceTree = "<group>"; };
+		A3CBF93116BD839200D9D766 /* CCInAppPurchaseTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCInAppPurchaseTVC.m; sourceTree = "<group>"; };
+		A3CBF93416BDBFBF00D9D766 /* InAppPurchaseDetails.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InAppPurchaseDetails.h; sourceTree = "<group>"; };
+		A3CBF93516BDBFBF00D9D766 /* InAppPurchaseDetails.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InAppPurchaseDetails.m; sourceTree = "<group>"; };
+		A3CBF93A16BDDAA400D9D766 /* NSData+base64Encoding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+base64Encoding.h"; sourceTree = "<group>"; };
+		A3CBF93B16BDDAA400D9D766 /* NSData+base64Encoding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+base64Encoding.m"; sourceTree = "<group>"; };
+		A3CBF93D16BDED4B00D9D766 /* NSData+Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Base64.h"; sourceTree = "<group>"; };
+		A3CBF93E16BDED4B00D9D766 /* NSData+Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+Base64.m"; sourceTree = "<group>"; };
+		A3CBF94016BDF21B00D9D766 /* NSDate+Compare.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Compare.h"; sourceTree = "<group>"; };
+		A3CBF94116BDF21B00D9D766 /* NSDate+Compare.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Compare.m"; sourceTree = "<group>"; };
+		A3CD401316BB028500DCE3A8 /* UIView+addShadow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+addShadow.h"; sourceTree = "<group>"; };
+		A3CD401416BB028500DCE3A8 /* UIView+addShadow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+addShadow.m"; sourceTree = "<group>"; };
+		A3CD401816BB12B000DCE3A8 /* Icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-72.png"; sourceTree = "<group>"; };
+		A3CD401916BB12B000DCE3A8 /* Icon-72@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-72@2x.png"; sourceTree = "<group>"; };
+		A3CD402016BB12F800DCE3A8 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
+		A3CD402216BB131F00DCE3A8 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		A3CD402816BB26BE00DCE3A8 /* CCAdBannerVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCAdBannerVC.h; sourceTree = "<group>"; };
+		A3CD402916BB26BE00DCE3A8 /* CCAdBannerVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCAdBannerVC.m; sourceTree = "<group>"; };
+		A3CD402B16BB2E3400DCE3A8 /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
+		A3FA0B5716B935D200436B10 /* CCAddDeckTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCAddDeckTVC.h; path = ../../CCAddDeckTVC.h; sourceTree = "<group>"; };
+		A3FA0B5816B935D200436B10 /* CCAddDeckTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCAddDeckTVC.m; path = ../../CCAddDeckTVC.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A3A8040716B14BD100D5A90A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A3CBF92716BD780300D9D766 /* StoreKit.framework in Frameworks */,
+				A3CD402C16BB2E3400DCE3A8 /* iAd.framework in Frameworks */,
+				A3B8B01C16B596D5009AD785 /* QuartzCore.framework in Frameworks */,
+				A3A8040F16B14BD100D5A90A /* UIKit.framework in Frameworks */,
+				A3A8041116B14BD100D5A90A /* Foundation.framework in Frameworks */,
+				A3A8041316B14BD100D5A90A /* CoreGraphics.framework in Frameworks */,
+				A3A8041516B14BD100D5A90A /* CoreData.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A324E98F16B1ED2C006E4A05 /* Objects */ = {
+			isa = PBXGroup;
+			children = (
+				A3CBF93316BDBF9300D9D766 /* InAppPurchaseDetails */,
+				A3CBF92216BD772400D9D766 /* InAppPurchaseManager */,
+				A3A8044716B153D000D5A90A /* ServerInteraction */,
+				A3BB6EB916B46CFC00617B15 /* CardDealer */,
+				A3BB6EAA16B2EC2700617B15 /* DataForShow */,
+				A324E9A016B1F37F006E4A05 /* DeckFactory */,
+				A324E99316B1F24C006E4A05 /* Database */,
+				A324E99116B1ED36006E4A05 /* CDAutoGen */,
+				A324E9BA16B200B7006E4A05 /* CDCategories */,
+			);
+			name = Objects;
+			sourceTree = "<group>";
+		};
+		A324E99116B1ED36006E4A05 /* CDAutoGen */ = {
+			isa = PBXGroup;
+			children = (
+				A324E9B116B1FA24006E4A05 /* Card.h */,
+				A324E9B216B1FA24006E4A05 /* Card.m */,
+				A324E9B416B1FA25006E4A05 /* Side.h */,
+				A324E9B516B1FA25006E4A05 /* Side.m */,
+				A324E9B716B1FA25006E4A05 /* Deck.h */,
+				A324E9B816B1FA25006E4A05 /* Deck.m */,
+			);
+			name = CDAutoGen;
+			sourceTree = "<group>";
+		};
+		A324E99316B1F24C006E4A05 /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				A324E99416B1F25D006E4A05 /* CCDatabaseInterface.h */,
+				A324E99516B1F25D006E4A05 /* CCDatabaseInterface.m */,
+			);
+			name = Database;
+			sourceTree = "<group>";
+		};
+		A324E9A016B1F37F006E4A05 /* DeckFactory */ = {
+			isa = PBXGroup;
+			children = (
+				A324E9A116B1F391006E4A05 /* CCDeckFactory.h */,
+				A324E9A216B1F391006E4A05 /* CCDeckFactory.m */,
+			);
+			name = DeckFactory;
+			sourceTree = "<group>";
+		};
+		A324E9BA16B200B7006E4A05 /* CDCategories */ = {
+			isa = PBXGroup;
+			children = (
+				A324E9BB16B200E3006E4A05 /* Deck+addSubitems.h */,
+				A324E9BC16B200E3006E4A05 /* Deck+addSubitems.m */,
+				A324E9BE16B20111006E4A05 /* Card+addSubitems.h */,
+				A324E9BF16B20111006E4A05 /* Card+addSubitems.m */,
+			);
+			name = CDCategories;
+			sourceTree = "<group>";
+		};
+		A3A803FF16B14BD100D5A90A = {
+			isa = PBXGroup;
+			children = (
+				A3CBF92616BD780200D9D766 /* StoreKit.framework */,
+				A3CD402B16BB2E3400DCE3A8 /* iAd.framework */,
+				A3CD402216BB131F00DCE3A8 /* Icon.png */,
+				A3CD402016BB12F800DCE3A8 /* Icon@2x.png */,
+				A3B8B01B16B596D5009AD785 /* QuartzCore.framework */,
+				A3A8041616B14BD100D5A90A /* cramcards */,
+				A3A8040D16B14BD100D5A90A /* Frameworks */,
+				A3A8040B16B14BD100D5A90A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A3A8040B16B14BD100D5A90A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A3A8040A16B14BD100D5A90A /* Cram Cards.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A3A8040D16B14BD100D5A90A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A3A8040E16B14BD100D5A90A /* UIKit.framework */,
+				A3A8041016B14BD100D5A90A /* Foundation.framework */,
+				A3A8041216B14BD100D5A90A /* CoreGraphics.framework */,
+				A3A8041416B14BD100D5A90A /* CoreData.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A3A8041616B14BD100D5A90A /* cramcards */ = {
+			isa = PBXGroup;
+			children = (
+				A3CD401616BB129000DCE3A8 /* Resources */,
+				A324E98F16B1ED2C006E4A05 /* Objects */,
+				A3A8043916B14BF800D5A90A /* Views */,
+				A3A8041F16B14BD100D5A90A /* CCAppDelegate.h */,
+				A3A8042016B14BD100D5A90A /* CCAppDelegate.m */,
+				A3A8042816B14BD200D5A90A /* MainStoryboard.storyboard */,
+				A3A8042E16B14BD200D5A90A /* CCMasterViewController.h */,
+				A3A8042F16B14BD200D5A90A /* CCMasterViewController.m */,
+				A3A8042B16B14BD200D5A90A /* cramcards.xcdatamodeld */,
+				A3A8041716B14BD100D5A90A /* Supporting Files */,
+			);
+			path = cramcards;
+			sourceTree = "<group>";
+		};
+		A3A8041716B14BD100D5A90A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A3A8041816B14BD100D5A90A /* cramcards-Info.plist */,
+				A3A8041916B14BD100D5A90A /* InfoPlist.strings */,
+				A3A8041C16B14BD100D5A90A /* main.m */,
+				A3A8041E16B14BD100D5A90A /* cramcards-Prefix.pch */,
+				A3A8042216B14BD100D5A90A /* Default.png */,
+				A3A8042416B14BD200D5A90A /* Default@2x.png */,
+				A3A8042616B14BD200D5A90A /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A3A8043916B14BF800D5A90A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A3CBF92F16BD837E00D9D766 /* InAppPurchaseTVC */,
+				A3CBF91E16BD6CFA00D9D766 /* Options */,
+				A3CD401216BB027900DCE3A8 /* HelpingObjects */,
+				A3FA0B5516B935BA00436B10 /* AddDeckView */,
+				A3BB6E9E16B2B39A00617B15 /* CrammingViews */,
+				A3A8044B16B154EF00D5A90A /* DeckViewer */,
+				A3A8044C16B154F800D5A90A /* Pre-CramSettings */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		A3A8044716B153D000D5A90A /* ServerInteraction */ = {
+			isa = PBXGroup;
+			children = (
+				A3A8044116B1520900D5A90A /* CCServerInterface.h */,
+				A3A8044216B1520900D5A90A /* CCServerInterface.m */,
+				A3A8044416B153CA00D5A90A /* NSDictionary+JSON.h */,
+				A3A8044516B153CA00D5A90A /* NSDictionary+JSON.m */,
+				A3CBF93A16BDDAA400D9D766 /* NSData+base64Encoding.h */,
+				A3CBF93B16BDDAA400D9D766 /* NSData+base64Encoding.m */,
+				A3CBF93D16BDED4B00D9D766 /* NSData+Base64.h */,
+				A3CBF93E16BDED4B00D9D766 /* NSData+Base64.m */,
+			);
+			name = ServerInteraction;
+			sourceTree = "<group>";
+		};
+		A3A8044B16B154EF00D5A90A /* DeckViewer */ = {
+			isa = PBXGroup;
+			children = (
+				A3A8044816B154C400D5A90A /* CCDeckTVC.h */,
+				A3A8044916B154C400D5A90A /* CCDeckTVC.m */,
+			);
+			name = DeckViewer;
+			sourceTree = "<group>";
+		};
+		A3A8044C16B154F800D5A90A /* Pre-CramSettings */ = {
+			isa = PBXGroup;
+			children = (
+				A3A8043A16B14C3B00D5A90A /* CCCramSettingsTVC.h */,
+				A3A8043B16B14C3B00D5A90A /* CCCramSettingsTVC.m */,
+			);
+			name = "Pre-CramSettings";
+			sourceTree = "<group>";
+		};
+		A3BB6E9E16B2B39A00617B15 /* CrammingViews */ = {
+			isa = PBXGroup;
+			children = (
+				A3BB6EA016B2B3C300617B15 /* CCCramContainerVC.h */,
+				A3BB6EA116B2B3C300617B15 /* CCCramContainerVC.m */,
+				A3BB6EA316B2B3C700617B15 /* CardView */,
+				A3BB6EB516B46C4000617B15 /* CrammingInfo */,
+				A3CD402416BB264000DCE3A8 /* AdBannerView */,
+			);
+			name = CrammingViews;
+			sourceTree = "<group>";
+		};
+		A3BB6EA316B2B3C700617B15 /* CardView */ = {
+			isa = PBXGroup;
+			children = (
+				A3B8B01716B59663009AD785 /* UILabel+sizeToFit.h */,
+				A3B8B01816B59663009AD785 /* UILabel+sizeToFit.m */,
+				A3BB6EA716B2B40400617B15 /* CCCramCardVC.h */,
+				A3BB6EA816B2B40400617B15 /* CCCramCardVC.m */,
+			);
+			name = CardView;
+			sourceTree = "<group>";
+		};
+		A3BB6EAA16B2EC2700617B15 /* DataForShow */ = {
+			isa = PBXGroup;
+			children = (
+				A3BB6EB116B2EDF900617B15 /* Factory */,
+				A3BB6EAE16B2EC9000617B15 /* CCCardDataForShow.h */,
+				A3BB6EAF16B2EC9000617B15 /* CCCardDataForShow.m */,
+			);
+			name = DataForShow;
+			sourceTree = "<group>";
+		};
+		A3BB6EB116B2EDF900617B15 /* Factory */ = {
+			isa = PBXGroup;
+			children = (
+				A3BB6EB216B2EE0600617B15 /* CCCardForShowFactory.h */,
+				A3BB6EB316B2EE0600617B15 /* CCCardForShowFactory.m */,
+			);
+			name = Factory;
+			sourceTree = "<group>";
+		};
+		A3BB6EB516B46C4000617B15 /* CrammingInfo */ = {
+			isa = PBXGroup;
+			children = (
+				A3BB6EB616B46C6300617B15 /* CCSessionInfo.h */,
+				A3BB6EB716B46C6300617B15 /* CCSessionInfo.m */,
+			);
+			name = CrammingInfo;
+			sourceTree = "<group>";
+		};
+		A3BB6EB916B46CFC00617B15 /* CardDealer */ = {
+			isa = PBXGroup;
+			children = (
+				A3BB6EBA16B46D0A00617B15 /* CCCardDealer.h */,
+				A3BB6EBB16B46D0A00617B15 /* CCCardDealer.m */,
+			);
+			name = CardDealer;
+			sourceTree = "<group>";
+		};
+		A3CBF91E16BD6CFA00D9D766 /* Options */ = {
+			isa = PBXGroup;
+			children = (
+				A3CBF91F16BD6D1000D9D766 /* CCOptionsTVC.h */,
+				A3CBF92016BD6D1000D9D766 /* CCOptionsTVC.m */,
+			);
+			name = Options;
+			sourceTree = "<group>";
+		};
+		A3CBF92216BD772400D9D766 /* InAppPurchaseManager */ = {
+			isa = PBXGroup;
+			children = (
+				A3CBF92B16BD80E000D9D766 /* InAppPurchaseManager */,
+				A3CBF92C16BD81D600D9D766 /* CCInAppPurchaseManager.h */,
+				A3CBF92D16BD81D600D9D766 /* CCInAppPurchaseManager.m */,
+			);
+			name = InAppPurchaseManager;
+			sourceTree = "<group>";
+		};
+		A3CBF92B16BD80E000D9D766 /* InAppPurchaseManager */ = {
+			isa = PBXGroup;
+			children = (
+				A3CBF92316BD77DB00D9D766 /* InAppPurchaseManager.h */,
+				A3CBF92416BD77DB00D9D766 /* InAppPurchaseManager.m */,
+				A3CBF92816BD78F400D9D766 /* SKProduct+LocalizedPrice.h */,
+				A3CBF92916BD78F400D9D766 /* SKProduct+LocalizedPrice.m */,
+			);
+			name = InAppPurchaseManager;
+			sourceTree = "<group>";
+		};
+		A3CBF92F16BD837E00D9D766 /* InAppPurchaseTVC */ = {
+			isa = PBXGroup;
+			children = (
+				A3CBF93016BD839200D9D766 /* CCInAppPurchaseTVC.h */,
+				A3CBF93116BD839200D9D766 /* CCInAppPurchaseTVC.m */,
+			);
+			name = InAppPurchaseTVC;
+			sourceTree = "<group>";
+		};
+		A3CBF93316BDBF9300D9D766 /* InAppPurchaseDetails */ = {
+			isa = PBXGroup;
+			children = (
+				A3CBF93416BDBFBF00D9D766 /* InAppPurchaseDetails.h */,
+				A3CBF93516BDBFBF00D9D766 /* InAppPurchaseDetails.m */,
+			);
+			name = InAppPurchaseDetails;
+			sourceTree = "<group>";
+		};
+		A3CD401216BB027900DCE3A8 /* HelpingObjects */ = {
+			isa = PBXGroup;
+			children = (
+				A3CBF94016BDF21B00D9D766 /* NSDate+Compare.h */,
+				A3CBF94116BDF21B00D9D766 /* NSDate+Compare.m */,
+				A3CD401316BB028500DCE3A8 /* UIView+addShadow.h */,
+				A3CD401416BB028500DCE3A8 /* UIView+addShadow.m */,
+			);
+			name = HelpingObjects;
+			sourceTree = "<group>";
+		};
+		A3CD401616BB129000DCE3A8 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				A3CD401716BB129C00DCE3A8 /* Logos */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		A3CD401716BB129C00DCE3A8 /* Logos */ = {
+			isa = PBXGroup;
+			children = (
+				A3CD401816BB12B000DCE3A8 /* Icon-72.png */,
+				A3CD401916BB12B000DCE3A8 /* Icon-72@2x.png */,
+			);
+			name = Logos;
+			sourceTree = "<group>";
+		};
+		A3CD402416BB264000DCE3A8 /* AdBannerView */ = {
+			isa = PBXGroup;
+			children = (
+				A3CD402816BB26BE00DCE3A8 /* CCAdBannerVC.h */,
+				A3CD402916BB26BE00DCE3A8 /* CCAdBannerVC.m */,
+			);
+			name = AdBannerView;
+			sourceTree = "<group>";
+		};
+		A3FA0B5516B935BA00436B10 /* AddDeckView */ = {
+			isa = PBXGroup;
+			children = (
+				A3FA0B5716B935D200436B10 /* CCAddDeckTVC.h */,
+				A3FA0B5816B935D200436B10 /* CCAddDeckTVC.m */,
+			);
+			name = AddDeckView;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A3A8040916B14BD100D5A90A /* cramcards */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A3A8043616B14BD200D5A90A /* Build configuration list for PBXNativeTarget "cramcards" */;
+			buildPhases = (
+				A3A8040616B14BD100D5A90A /* Sources */,
+				A3A8040716B14BD100D5A90A /* Frameworks */,
+				A3A8040816B14BD100D5A90A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = cramcards;
+			productName = cramcards;
+			productReference = A3A8040A16B14BD100D5A90A /* Cram Cards.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A3A8040116B14BD100D5A90A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = CC;
+				LastUpgradeCheck = 0450;
+				ORGANIZATIONNAME = CC;
+			};
+			buildConfigurationList = A3A8040416B14BD100D5A90A /* Build configuration list for PBXProject "cramcards" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = A3A803FF16B14BD100D5A90A;
+			productRefGroup = A3A8040B16B14BD100D5A90A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A3A8040916B14BD100D5A90A /* cramcards */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A3A8040816B14BD100D5A90A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A3A8041B16B14BD100D5A90A /* InfoPlist.strings in Resources */,
+				A3A8042316B14BD200D5A90A /* Default.png in Resources */,
+				A3A8042516B14BD200D5A90A /* Default@2x.png in Resources */,
+				A3A8042716B14BD200D5A90A /* Default-568h@2x.png in Resources */,
+				A3A8042A16B14BD200D5A90A /* MainStoryboard.storyboard in Resources */,
+				A3CD401A16BB12B000DCE3A8 /* Icon-72.png in Resources */,
+				A3CD401B16BB12B000DCE3A8 /* Icon-72@2x.png in Resources */,
+				A3CD402116BB12F800DCE3A8 /* Icon@2x.png in Resources */,
+				A3CD402316BB131F00DCE3A8 /* Icon.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A3A8040616B14BD100D5A90A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A3A8041D16B14BD100D5A90A /* main.m in Sources */,
+				A3A8042116B14BD100D5A90A /* CCAppDelegate.m in Sources */,
+				A3A8042D16B14BD200D5A90A /* cramcards.xcdatamodeld in Sources */,
+				A3A8043016B14BD200D5A90A /* CCMasterViewController.m in Sources */,
+				A3A8043C16B14C3B00D5A90A /* CCCramSettingsTVC.m in Sources */,
+				A3A8044316B1520900D5A90A /* CCServerInterface.m in Sources */,
+				A3A8044616B153CA00D5A90A /* NSDictionary+JSON.m in Sources */,
+				A3A8044A16B154C400D5A90A /* CCDeckTVC.m in Sources */,
+				A324E99616B1F25D006E4A05 /* CCDatabaseInterface.m in Sources */,
+				A324E9A316B1F391006E4A05 /* CCDeckFactory.m in Sources */,
+				A324E9B316B1FA24006E4A05 /* Card.m in Sources */,
+				A324E9B616B1FA25006E4A05 /* Side.m in Sources */,
+				A324E9B916B1FA25006E4A05 /* Deck.m in Sources */,
+				A324E9BD16B200E3006E4A05 /* Deck+addSubitems.m in Sources */,
+				A324E9C016B20111006E4A05 /* Card+addSubitems.m in Sources */,
+				A3BB6EA216B2B3C300617B15 /* CCCramContainerVC.m in Sources */,
+				A3BB6EA916B2B40400617B15 /* CCCramCardVC.m in Sources */,
+				A3BB6EB016B2EC9000617B15 /* CCCardDataForShow.m in Sources */,
+				A3BB6EB416B2EE0600617B15 /* CCCardForShowFactory.m in Sources */,
+				A3BB6EB816B46C6300617B15 /* CCSessionInfo.m in Sources */,
+				A3BB6EBC16B46D0A00617B15 /* CCCardDealer.m in Sources */,
+				A3B8B01916B59663009AD785 /* UILabel+sizeToFit.m in Sources */,
+				A3FA0B5916B935D200436B10 /* CCAddDeckTVC.m in Sources */,
+				A3CD401516BB028500DCE3A8 /* UIView+addShadow.m in Sources */,
+				A3CD402A16BB26BE00DCE3A8 /* CCAdBannerVC.m in Sources */,
+				A3CBF92116BD6D1000D9D766 /* CCOptionsTVC.m in Sources */,
+				A3CBF92516BD77DB00D9D766 /* InAppPurchaseManager.m in Sources */,
+				A3CBF92A16BD78F400D9D766 /* SKProduct+LocalizedPrice.m in Sources */,
+				A3CBF92E16BD81D600D9D766 /* CCInAppPurchaseManager.m in Sources */,
+				A3CBF93216BD839200D9D766 /* CCInAppPurchaseTVC.m in Sources */,
+				A3CBF93616BDBFBF00D9D766 /* InAppPurchaseDetails.m in Sources */,
+				A3CBF93C16BDDAA400D9D766 /* NSData+base64Encoding.m in Sources */,
+				A3CBF93F16BDED4B00D9D766 /* NSData+Base64.m in Sources */,
+				A3CBF94216BDF21B00D9D766 /* NSDate+Compare.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		A3A8041916B14BD100D5A90A /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A3A8041A16B14BD100D5A90A /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		A3A8042816B14BD200D5A90A /* MainStoryboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A3A8042916B14BD200D5A90A /* en */,
+			);
+			name = MainStoryboard.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A3A8043416B14BD200D5A90A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		A3A8043516B14BD200D5A90A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A3A8043716B14BD200D5A90A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "cramcards/cramcards-Prefix.pch";
+				INFOPLIST_FILE = "cramcards/cramcards-Info.plist";
+				PRODUCT_NAME = "Cram Cards";
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		A3A8043816B14BD200D5A90A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "cramcards/cramcards-Prefix.pch";
+				INFOPLIST_FILE = "cramcards/cramcards-Info.plist";
+				PRODUCT_NAME = "Cram Cards";
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A3A8040416B14BD100D5A90A /* Build configuration list for PBXProject "cramcards" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A3A8043416B14BD200D5A90A /* Debug */,
+				A3A8043516B14BD200D5A90A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A3A8043616B14BD200D5A90A /* Build configuration list for PBXNativeTarget "cramcards" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A3A8043716B14BD200D5A90A /* Debug */,
+				A3A8043816B14BD200D5A90A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		A3A8042B16B14BD200D5A90A /* cramcards.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				A3A8042C16B14BD200D5A90A /* cramcards.xcdatamodel */,
+			);
+			currentVersion = A3A8042C16B14BD200D5A90A /* cramcards.xcdatamodel */;
+			path = cramcards.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = A3A8040116B14BD100D5A90A /* Project object */;
+}
