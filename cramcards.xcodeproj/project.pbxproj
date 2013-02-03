@@ -14,6 +14,8 @@
 		A324E9B916B1FA25006E4A05 /* Deck.m in Sources */ = {isa = PBXBuildFile; fileRef = A324E9B816B1FA25006E4A05 /* Deck.m */; };
 		A324E9BD16B200E3006E4A05 /* Deck+addSubitems.m in Sources */ = {isa = PBXBuildFile; fileRef = A324E9BC16B200E3006E4A05 /* Deck+addSubitems.m */; };
 		A324E9C016B20111006E4A05 /* Card+addSubitems.m in Sources */ = {isa = PBXBuildFile; fileRef = A324E9BF16B20111006E4A05 /* Card+addSubitems.m */; };
+		A338A82016BEEEB300F09D43 /* CCAddDeckTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A338A81F16BEEEB300F09D43 /* CCAddDeckTVC.m */; };
+		A338A82316BEEEF000F09D43 /* CCDeckTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A338A82216BEEEF000F09D43 /* CCDeckTVC.m */; };
 		A3A8040F16B14BD100D5A90A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3A8040E16B14BD100D5A90A /* UIKit.framework */; };
 		A3A8041116B14BD100D5A90A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3A8041016B14BD100D5A90A /* Foundation.framework */; };
 		A3A8041316B14BD100D5A90A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3A8041216B14BD100D5A90A /* CoreGraphics.framework */; };
@@ -30,7 +32,6 @@
 		A3A8043C16B14C3B00D5A90A /* CCCramSettingsTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A3A8043B16B14C3B00D5A90A /* CCCramSettingsTVC.m */; };
 		A3A8044316B1520900D5A90A /* CCServerInterface.m in Sources */ = {isa = PBXBuildFile; fileRef = A3A8044216B1520900D5A90A /* CCServerInterface.m */; };
 		A3A8044616B153CA00D5A90A /* NSDictionary+JSON.m in Sources */ = {isa = PBXBuildFile; fileRef = A3A8044516B153CA00D5A90A /* NSDictionary+JSON.m */; };
-		A3A8044A16B154C400D5A90A /* CCDeckTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A3A8044916B154C400D5A90A /* CCDeckTVC.m */; };
 		A3B8B01916B59663009AD785 /* UILabel+sizeToFit.m in Sources */ = {isa = PBXBuildFile; fileRef = A3B8B01816B59663009AD785 /* UILabel+sizeToFit.m */; };
 		A3B8B01C16B596D5009AD785 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3B8B01B16B596D5009AD785 /* QuartzCore.framework */; };
 		A3BB6EA216B2B3C300617B15 /* CCCramContainerVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A3BB6EA116B2B3C300617B15 /* CCCramContainerVC.m */; };
@@ -56,7 +57,6 @@
 		A3CD402316BB131F00DCE3A8 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = A3CD402216BB131F00DCE3A8 /* Icon.png */; };
 		A3CD402A16BB26BE00DCE3A8 /* CCAdBannerVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A3CD402916BB26BE00DCE3A8 /* CCAdBannerVC.m */; };
 		A3CD402C16BB2E3400DCE3A8 /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3CD402B16BB2E3400DCE3A8 /* iAd.framework */; };
-		A3FA0B5916B935D200436B10 /* CCAddDeckTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A3FA0B5816B935D200436B10 /* CCAddDeckTVC.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -74,6 +74,10 @@
 		A324E9BC16B200E3006E4A05 /* Deck+addSubitems.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Deck+addSubitems.m"; sourceTree = "<group>"; };
 		A324E9BE16B20111006E4A05 /* Card+addSubitems.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Card+addSubitems.h"; sourceTree = "<group>"; };
 		A324E9BF16B20111006E4A05 /* Card+addSubitems.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Card+addSubitems.m"; sourceTree = "<group>"; };
+		A338A81E16BEEEB300F09D43 /* CCAddDeckTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCAddDeckTVC.h; sourceTree = "<group>"; };
+		A338A81F16BEEEB300F09D43 /* CCAddDeckTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCAddDeckTVC.m; sourceTree = "<group>"; };
+		A338A82116BEEEF000F09D43 /* CCDeckTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCDeckTVC.h; sourceTree = "<group>"; };
+		A338A82216BEEEF000F09D43 /* CCDeckTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCDeckTVC.m; sourceTree = "<group>"; };
 		A3A8040A16B14BD100D5A90A /* Cram Cards.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Cram Cards.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3A8040E16B14BD100D5A90A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		A3A8041016B14BD100D5A90A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -98,8 +102,6 @@
 		A3A8044216B1520900D5A90A /* CCServerInterface.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCServerInterface.m; sourceTree = "<group>"; };
 		A3A8044416B153CA00D5A90A /* NSDictionary+JSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+JSON.h"; sourceTree = "<group>"; };
 		A3A8044516B153CA00D5A90A /* NSDictionary+JSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+JSON.m"; sourceTree = "<group>"; };
-		A3A8044816B154C400D5A90A /* CCDeckTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCDeckTVC.h; path = ../CCDeckTVC.h; sourceTree = "<group>"; };
-		A3A8044916B154C400D5A90A /* CCDeckTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCDeckTVC.m; path = ../CCDeckTVC.m; sourceTree = "<group>"; };
 		A3B8B01716B59663009AD785 /* UILabel+sizeToFit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+sizeToFit.h"; sourceTree = "<group>"; };
 		A3B8B01816B59663009AD785 /* UILabel+sizeToFit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+sizeToFit.m"; sourceTree = "<group>"; };
 		A3B8B01B16B596D5009AD785 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
@@ -143,8 +145,6 @@
 		A3CD402816BB26BE00DCE3A8 /* CCAdBannerVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCAdBannerVC.h; sourceTree = "<group>"; };
 		A3CD402916BB26BE00DCE3A8 /* CCAdBannerVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCAdBannerVC.m; sourceTree = "<group>"; };
 		A3CD402B16BB2E3400DCE3A8 /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
-		A3FA0B5716B935D200436B10 /* CCAddDeckTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCAddDeckTVC.h; path = ../../CCAddDeckTVC.h; sourceTree = "<group>"; };
-		A3FA0B5816B935D200436B10 /* CCAddDeckTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCAddDeckTVC.m; path = ../../CCAddDeckTVC.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -319,8 +319,8 @@
 		A3A8044B16B154EF00D5A90A /* DeckViewer */ = {
 			isa = PBXGroup;
 			children = (
-				A3A8044816B154C400D5A90A /* CCDeckTVC.h */,
-				A3A8044916B154C400D5A90A /* CCDeckTVC.m */,
+				A338A82116BEEEF000F09D43 /* CCDeckTVC.h */,
+				A338A82216BEEEF000F09D43 /* CCDeckTVC.m */,
 			);
 			name = DeckViewer;
 			sourceTree = "<group>";
@@ -482,8 +482,8 @@
 		A3FA0B5516B935BA00436B10 /* AddDeckView */ = {
 			isa = PBXGroup;
 			children = (
-				A3FA0B5716B935D200436B10 /* CCAddDeckTVC.h */,
-				A3FA0B5816B935D200436B10 /* CCAddDeckTVC.m */,
+				A338A81E16BEEEB300F09D43 /* CCAddDeckTVC.h */,
+				A338A81F16BEEEB300F09D43 /* CCAddDeckTVC.m */,
 			);
 			name = AddDeckView;
 			sourceTree = "<group>";
@@ -566,7 +566,6 @@
 				A3A8043C16B14C3B00D5A90A /* CCCramSettingsTVC.m in Sources */,
 				A3A8044316B1520900D5A90A /* CCServerInterface.m in Sources */,
 				A3A8044616B153CA00D5A90A /* NSDictionary+JSON.m in Sources */,
-				A3A8044A16B154C400D5A90A /* CCDeckTVC.m in Sources */,
 				A324E99616B1F25D006E4A05 /* CCDatabaseInterface.m in Sources */,
 				A324E9A316B1F391006E4A05 /* CCDeckFactory.m in Sources */,
 				A324E9B316B1FA24006E4A05 /* Card.m in Sources */,
@@ -581,7 +580,6 @@
 				A3BB6EB816B46C6300617B15 /* CCSessionInfo.m in Sources */,
 				A3BB6EBC16B46D0A00617B15 /* CCCardDealer.m in Sources */,
 				A3B8B01916B59663009AD785 /* UILabel+sizeToFit.m in Sources */,
-				A3FA0B5916B935D200436B10 /* CCAddDeckTVC.m in Sources */,
 				A3CD401516BB028500DCE3A8 /* UIView+addShadow.m in Sources */,
 				A3CD402A16BB26BE00DCE3A8 /* CCAdBannerVC.m in Sources */,
 				A3CBF92116BD6D1000D9D766 /* CCOptionsTVC.m in Sources */,
@@ -593,6 +591,8 @@
 				A3CBF93C16BDDAA400D9D766 /* NSData+base64Encoding.m in Sources */,
 				A3CBF93F16BDED4B00D9D766 /* NSData+Base64.m in Sources */,
 				A3CBF94216BDF21B00D9D766 /* NSDate+Compare.m in Sources */,
+				A338A82016BEEEB300F09D43 /* CCAddDeckTVC.m in Sources */,
+				A338A82316BEEEF000F09D43 /* CCDeckTVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
