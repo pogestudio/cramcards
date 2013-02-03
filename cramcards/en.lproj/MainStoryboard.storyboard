@@ -105,7 +105,25 @@
                     <view key="view" contentMode="scaleToFill" id="3nG-5m-mGB">
                         <rect key="frame" x="0.0" y="20" width="320" height="411"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="09f-AO-OOJ">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="257" id="zyC-JE-EbJ"/>
+                                </constraints>
+                                <string key="text">This app will be developed together with You. Using the feedback function. you can tell us what you think is good, bad, what you want and what you don't want. What are you using the most, and why?
+
+We want to make this app suit you. So let us know!</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="09f-AO-OOJ" firstAttribute="leading" secondItem="3nG-5m-mGB" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="Bry-Eq-QL6"/>
+                            <constraint firstItem="09f-AO-OOJ" firstAttribute="top" secondItem="3nG-5m-mGB" secondAttribute="top" constant="42" id="Y6l-Q8-6UI"/>
+                            <constraint firstAttribute="trailing" secondItem="09f-AO-OOJ" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="zYK-BP-oJJ"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Feedback" id="fXx-m6-TOY"/>
                 </viewController>
