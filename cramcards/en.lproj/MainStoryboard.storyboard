@@ -98,10 +98,10 @@
             </objects>
             <point key="canvasLocation" x="-980" y="757"/>
         </scene>
-        <!--View Controller - Feedback-->
+        <!--Feedback Apptentive - Feedback-->
         <scene sceneID="9sO-Fl-zCh">
             <objects>
-                <viewController id="5pS-7a-Glq" sceneMemberID="viewController">
+                <viewController id="5pS-7a-Glq" customClass="CCFeedbackApptentive" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3nG-5m-mGB">
                         <rect key="frame" x="0.0" y="20" width="320" height="411"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -117,11 +117,26 @@ We want to make this app suit you. So let us know!</string>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="21H-Pb-Iv4">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="FEEDBACK">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="showFeedback:" destination="5pS-7a-Glq" eventType="touchUpInside" id="4FX-EH-AtF"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="09f-AO-OOJ" firstAttribute="leading" secondItem="3nG-5m-mGB" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="Bry-Eq-QL6"/>
+                            <constraint firstItem="21H-Pb-Iv4" firstAttribute="centerX" secondItem="09f-AO-OOJ" secondAttribute="centerX" type="default" id="Ka6-6M-LcU"/>
                             <constraint firstItem="09f-AO-OOJ" firstAttribute="top" secondItem="3nG-5m-mGB" secondAttribute="top" constant="42" id="Y6l-Q8-6UI"/>
+                            <constraint firstAttribute="bottom" secondItem="21H-Pb-Iv4" secondAttribute="bottom" constant="72" id="qdB-eO-YOw"/>
                             <constraint firstAttribute="trailing" secondItem="09f-AO-OOJ" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="zYK-BP-oJJ"/>
                         </constraints>
                     </view>
@@ -1042,6 +1057,9 @@ We want to make this app suit you. So let us know!</string>
         <class className="CCCramCardVC" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/CCCramCardVC.h"/>
             <relationships>
+                <relationship kind="action" name="answerButtonWasPressed:"/>
+                <relationship kind="action" name="screenWasTapped:"/>
+                <relationship kind="action" name="skipThisCard:"/>
                 <relationship kind="outlet" name="cardLabel" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="confirmationText" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="skipThisCard" candidateClass="UIButton"/>
@@ -1056,6 +1074,8 @@ We want to make this app suit you. So let us know!</string>
         <class className="CCCramSettingsTVC" superclassName="UITableViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/CCCramSettingsTVC.h"/>
             <relationships>
+                <relationship kind="action" name="switchValueChanged:"/>
+                <relationship kind="action" name="valueChangedForTool:"/>
                 <relationship kind="outlet" name="backSide" candidateClass="UISwitch"/>
                 <relationship kind="outlet" name="correctAmount" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="correctStepper" candidateClass="UIStepper"/>
@@ -1067,6 +1087,12 @@ We want to make this app suit you. So let us know!</string>
         </class>
         <class className="CCDeckTVC" superclassName="UITableViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/CCDeckTVC.h"/>
+        </class>
+        <class className="CCFeedbackApptentive" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/CCFeedbackApptentive.h"/>
+            <relationships>
+                <relationship kind="action" name="showFeedback:"/>
+            </relationships>
         </class>
         <class className="CCInAppPurchaseTVC" superclassName="UITableViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/CCInAppPurchaseTVC.h"/>

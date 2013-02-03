@@ -16,6 +16,13 @@
 		A324E9C016B20111006E4A05 /* Card+addSubitems.m in Sources */ = {isa = PBXBuildFile; fileRef = A324E9BF16B20111006E4A05 /* Card+addSubitems.m */; };
 		A338A82016BEEEB300F09D43 /* CCAddDeckTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A338A81F16BEEEB300F09D43 /* CCAddDeckTVC.m */; };
 		A338A82316BEEEF000F09D43 /* CCDeckTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A338A82216BEEEF000F09D43 /* CCDeckTVC.m */; };
+		A338A95E16BF28CA00F09D43 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A338A95D16BF28CA00F09D43 /* CoreTelephony.framework */; };
+		A338A96016BF28DF00F09D43 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A338A95F16BF28DF00F09D43 /* SystemConfiguration.framework */; };
+		A338A97116BF29BA00F09D43 /* libApptentiveConnect.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A338A96816BF292600F09D43 /* libApptentiveConnect.a */; };
+		A338A97216BF29BA00F09D43 /* ApptentiveConnectTests.octest in Frameworks */ = {isa = PBXBuildFile; fileRef = A338A96A16BF292600F09D43 /* ApptentiveConnectTests.octest */; };
+		A338A97316BF29BA00F09D43 /* ApptentiveResources.bundle in Frameworks */ = {isa = PBXBuildFile; fileRef = A338A96C16BF292600F09D43 /* ApptentiveResources.bundle */; };
+		A338A97416BF29F200F09D43 /* ApptentiveResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = A338A96C16BF292600F09D43 /* ApptentiveResources.bundle */; };
+		A338A97D16BF2E7700F09D43 /* CCFeedbackApptentive.m in Sources */ = {isa = PBXBuildFile; fileRef = A338A97C16BF2E7700F09D43 /* CCFeedbackApptentive.m */; };
 		A3A8040F16B14BD100D5A90A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3A8040E16B14BD100D5A90A /* UIKit.framework */; };
 		A3A8041116B14BD100D5A90A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3A8041016B14BD100D5A90A /* Foundation.framework */; };
 		A3A8041316B14BD100D5A90A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3A8041216B14BD100D5A90A /* CoreGraphics.framework */; };
@@ -59,6 +66,44 @@
 		A3CD402C16BB2E3400DCE3A8 /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3CD402B16BB2E3400DCE3A8 /* iAd.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		A338A96716BF292600F09D43 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A338A96116BF292600F09D43 /* ApptentiveConnect.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 496DC37F1333D35600743F65;
+			remoteInfo = ApptentiveConnect;
+		};
+		A338A96916BF292600F09D43 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A338A96116BF292600F09D43 /* ApptentiveConnect.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 496DC38C1333D35600743F65;
+			remoteInfo = ApptentiveConnectTests;
+		};
+		A338A96B16BF292600F09D43 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A338A96116BF292600F09D43 /* ApptentiveConnect.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 49D1118C13341A7C00603373;
+			remoteInfo = ApptentiveResources;
+		};
+		A338A96D16BF299200F09D43 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A338A96116BF292600F09D43 /* ApptentiveConnect.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 496DC37E1333D35600743F65;
+			remoteInfo = ApptentiveConnect;
+		};
+		A338A96F16BF299200F09D43 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A338A96116BF292600F09D43 /* ApptentiveConnect.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 49D1118B13341A7C00603373;
+			remoteInfo = ApptentiveResources;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		A324E99416B1F25D006E4A05 /* CCDatabaseInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCDatabaseInterface.h; sourceTree = "<group>"; };
 		A324E99516B1F25D006E4A05 /* CCDatabaseInterface.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCDatabaseInterface.m; sourceTree = "<group>"; };
@@ -78,6 +123,13 @@
 		A338A81F16BEEEB300F09D43 /* CCAddDeckTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCAddDeckTVC.m; sourceTree = "<group>"; };
 		A338A82116BEEEF000F09D43 /* CCDeckTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCDeckTVC.h; sourceTree = "<group>"; };
 		A338A82216BEEEF000F09D43 /* CCDeckTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCDeckTVC.m; sourceTree = "<group>"; };
+		A338A95D16BF28CA00F09D43 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		A338A95F16BF28DF00F09D43 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		A338A96116BF292600F09D43 /* ApptentiveConnect.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ApptentiveConnect.xcodeproj; path = "../../../../Programmering/Apptentive/apptentive-apptentive-ios-eb788cd/ApptentiveConnect/ApptentiveConnect.xcodeproj"; sourceTree = "<group>"; };
+		A338A97516BF2A1200F09D43 /* ATConnect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATConnect.h; sourceTree = "<group>"; };
+		A338A97616BF2B2D00F09D43 /* ATAppRatingFlow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATAppRatingFlow.h; sourceTree = "<group>"; };
+		A338A97B16BF2E7700F09D43 /* CCFeedbackApptentive.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCFeedbackApptentive.h; sourceTree = "<group>"; };
+		A338A97C16BF2E7700F09D43 /* CCFeedbackApptentive.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCFeedbackApptentive.m; sourceTree = "<group>"; };
 		A3A8040A16B14BD100D5A90A /* Cram Cards.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Cram Cards.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3A8040E16B14BD100D5A90A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		A3A8041016B14BD100D5A90A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -152,6 +204,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A338A96016BF28DF00F09D43 /* SystemConfiguration.framework in Frameworks */,
+				A338A95E16BF28CA00F09D43 /* CoreTelephony.framework in Frameworks */,
 				A3CBF92716BD780300D9D766 /* StoreKit.framework in Frameworks */,
 				A3CD402C16BB2E3400DCE3A8 /* iAd.framework in Frameworks */,
 				A3B8B01C16B596D5009AD785 /* QuartzCore.framework in Frameworks */,
@@ -159,6 +213,9 @@
 				A3A8041116B14BD100D5A90A /* Foundation.framework in Frameworks */,
 				A3A8041316B14BD100D5A90A /* CoreGraphics.framework in Frameworks */,
 				A3A8041516B14BD100D5A90A /* CoreData.framework in Frameworks */,
+				A338A97116BF29BA00F09D43 /* libApptentiveConnect.a in Frameworks */,
+				A338A97216BF29BA00F09D43 /* ApptentiveConnectTests.octest in Frameworks */,
+				A338A97316BF29BA00F09D43 /* ApptentiveResources.bundle in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -168,6 +225,7 @@
 		A324E98F16B1ED2C006E4A05 /* Objects */ = {
 			isa = PBXGroup;
 			children = (
+				A3CD401216BB027900DCE3A8 /* HelpingObjects */,
 				A3CBF93316BDBF9300D9D766 /* InAppPurchaseDetails */,
 				A3CBF92216BD772400D9D766 /* InAppPurchaseManager */,
 				A3A8044716B153D000D5A90A /* ServerInteraction */,
@@ -223,9 +281,31 @@
 			name = CDCategories;
 			sourceTree = "<group>";
 		};
+		A338A96216BF292600F09D43 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A338A96816BF292600F09D43 /* libApptentiveConnect.a */,
+				A338A96A16BF292600F09D43 /* ApptentiveConnectTests.octest */,
+				A338A96C16BF292600F09D43 /* ApptentiveResources.bundle */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A338A97716BF2E1000F09D43 /* Feedback */ = {
+			isa = PBXGroup;
+			children = (
+				A338A97B16BF2E7700F09D43 /* CCFeedbackApptentive.h */,
+				A338A97C16BF2E7700F09D43 /* CCFeedbackApptentive.m */,
+			);
+			name = Feedback;
+			sourceTree = "<group>";
+		};
 		A3A803FF16B14BD100D5A90A = {
 			isa = PBXGroup;
 			children = (
+				A338A96116BF292600F09D43 /* ApptentiveConnect.xcodeproj */,
+				A338A95F16BF28DF00F09D43 /* SystemConfiguration.framework */,
+				A338A95D16BF28CA00F09D43 /* CoreTelephony.framework */,
 				A3CBF92616BD780200D9D766 /* StoreKit.framework */,
 				A3CD402B16BB2E3400DCE3A8 /* iAd.framework */,
 				A3CD402216BB131F00DCE3A8 /* Icon.png */,
@@ -259,6 +339,8 @@
 		A3A8041616B14BD100D5A90A /* cramcards */ = {
 			isa = PBXGroup;
 			children = (
+				A338A97616BF2B2D00F09D43 /* ATAppRatingFlow.h */,
+				A338A97516BF2A1200F09D43 /* ATConnect.h */,
 				A3CD401616BB129000DCE3A8 /* Resources */,
 				A324E98F16B1ED2C006E4A05 /* Objects */,
 				A3A8043916B14BF800D5A90A /* Views */,
@@ -290,13 +372,9 @@
 		A3A8043916B14BF800D5A90A /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				A3CBF92F16BD837E00D9D766 /* InAppPurchaseTVC */,
+				A338A97716BF2E1000F09D43 /* Feedback */,
 				A3CBF91E16BD6CFA00D9D766 /* Options */,
-				A3CD401216BB027900DCE3A8 /* HelpingObjects */,
-				A3FA0B5516B935BA00436B10 /* AddDeckView */,
-				A3BB6E9E16B2B39A00617B15 /* CrammingViews */,
 				A3A8044B16B154EF00D5A90A /* DeckViewer */,
-				A3A8044C16B154F800D5A90A /* Pre-CramSettings */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -319,6 +397,8 @@
 		A3A8044B16B154EF00D5A90A /* DeckViewer */ = {
 			isa = PBXGroup;
 			children = (
+				A3A8044C16B154F800D5A90A /* Pre-CramSettings */,
+				A3FA0B5516B935BA00436B10 /* AddDeckView */,
 				A338A82116BEEEF000F09D43 /* CCDeckTVC.h */,
 				A338A82216BEEEF000F09D43 /* CCDeckTVC.m */,
 			);
@@ -328,6 +408,7 @@
 		A3A8044C16B154F800D5A90A /* Pre-CramSettings */ = {
 			isa = PBXGroup;
 			children = (
+				A3BB6E9E16B2B39A00617B15 /* CrammingViews */,
 				A3A8043A16B14C3B00D5A90A /* CCCramSettingsTVC.h */,
 				A3A8043B16B14C3B00D5A90A /* CCCramSettingsTVC.m */,
 			);
@@ -397,6 +478,7 @@
 		A3CBF91E16BD6CFA00D9D766 /* Options */ = {
 			isa = PBXGroup;
 			children = (
+				A3CBF92F16BD837E00D9D766 /* InAppPurchaseTVC */,
 				A3CBF91F16BD6D1000D9D766 /* CCOptionsTVC.h */,
 				A3CBF92016BD6D1000D9D766 /* CCOptionsTVC.m */,
 			);
@@ -502,6 +584,8 @@
 			buildRules = (
 			);
 			dependencies = (
+				A338A96E16BF299200F09D43 /* PBXTargetDependency */,
+				A338A97016BF299200F09D43 /* PBXTargetDependency */,
 			);
 			name = cramcards;
 			productName = cramcards;
@@ -528,12 +612,42 @@
 			mainGroup = A3A803FF16B14BD100D5A90A;
 			productRefGroup = A3A8040B16B14BD100D5A90A /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = A338A96216BF292600F09D43 /* Products */;
+					ProjectRef = A338A96116BF292600F09D43 /* ApptentiveConnect.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				A3A8040916B14BD100D5A90A /* cramcards */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		A338A96816BF292600F09D43 /* libApptentiveConnect.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libApptentiveConnect.a;
+			remoteRef = A338A96716BF292600F09D43 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		A338A96A16BF292600F09D43 /* ApptentiveConnectTests.octest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = ApptentiveConnectTests.octest;
+			remoteRef = A338A96916BF292600F09D43 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		A338A96C16BF292600F09D43 /* ApptentiveResources.bundle */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = ApptentiveResources.bundle;
+			remoteRef = A338A96B16BF292600F09D43 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		A3A8040816B14BD100D5A90A /* Resources */ = {
@@ -549,6 +663,7 @@
 				A3CD401B16BB12B000DCE3A8 /* Icon-72@2x.png in Resources */,
 				A3CD402116BB12F800DCE3A8 /* Icon@2x.png in Resources */,
 				A3CD402316BB131F00DCE3A8 /* Icon.png in Resources */,
+				A338A97416BF29F200F09D43 /* ApptentiveResources.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -593,10 +708,24 @@
 				A3CBF94216BDF21B00D9D766 /* NSDate+Compare.m in Sources */,
 				A338A82016BEEEB300F09D43 /* CCAddDeckTVC.m in Sources */,
 				A338A82316BEEEF000F09D43 /* CCDeckTVC.m in Sources */,
+				A338A97D16BF2E7700F09D43 /* CCFeedbackApptentive.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A338A96E16BF299200F09D43 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = ApptentiveConnect;
+			targetProxy = A338A96D16BF299200F09D43 /* PBXContainerItemProxy */;
+		};
+		A338A97016BF299200F09D43 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = ApptentiveResources;
+			targetProxy = A338A96F16BF299200F09D43 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		A3A8041916B14BD100D5A90A /* InfoPlist.strings */ = {
@@ -676,6 +805,15 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "cramcards/cramcards-Prefix.pch";
 				INFOPLIST_FILE = "cramcards/cramcards-Info.plist";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-all_load\n-ObjC",
+					"-all_load\n-ObjC",
+					"-all_load\n-ObjC",
+					"-all_load\n-ObjC",
+					"-all_load\n-ObjC",
+					"-all_load",
+				);
 				PRODUCT_NAME = "Cram Cards";
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
@@ -692,6 +830,15 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "cramcards/cramcards-Prefix.pch";
 				INFOPLIST_FILE = "cramcards/cramcards-Info.plist";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-all_load\n-ObjC",
+					"-all_load\n-ObjC",
+					"-all_load\n-ObjC",
+					"-all_load\n-ObjC",
+					"-all_load\n-ObjC",
+					"-all_load",
+				);
 				PRODUCT_NAME = "Cram Cards";
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
