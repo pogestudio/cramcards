@@ -14,28 +14,25 @@
 
 @implementation CCAdBannerVC
 
-static BOOL _isABannerLoaded;
-
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
-    [self.bannerView setAutoresizingMask:UIViewAutoresizingFlexibleWidth];
+    
+
 }
 
--(void)viewWillAppear:(BOOL)animated
+-(void)viewDidAppear:(BOOL)animated
 {
-    [super viewWillAppear:animated];
-    self.bannerIsVisible = NO;
+    [super viewDidAppear:animated];
+    
+    CGRect newFrame = CGRectOffset(self.view.bounds, 0, self.view.bounds.size.height);
+    self.iBannerView = [[ADBannerView alloc] initWithFrame:newFrame];
+    self.iBannerView.delegate = self;
+    [self.view addSubview:self.iBannerView];
+    [self.iBannerView setAutoresizingMask:UIViewAutoresizingFlexibleWidth];
+    self.iBannerShouldBeVisible = NO;
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -44,38 +41,30 @@ static BOOL _isABannerLoaded;
     // Dispose of any resources that can be recreated.
 }
 
-#pragma mark Ad Logic
-+(BOOL)shouldLoadBanner
-{
-    BOOL shouldWeLoadBanner = _isABannerLoaded;
-    return shouldWeLoadBanner;
-}
 
 
 #pragma mark Banner Delegate
 - (void)bannerViewDidLoadAd:(ADBannerView *)banner
 {
-    if (!self.bannerIsVisible)
+    if (!self.iBannerShouldBeVisible)
     {
-        [UIView beginAnimations:@"animateAdBannerOn" context:NULL];
-        // Assumes the banner view is just off the bottom of the screen.
-        banner.frame = CGRectOffset(banner.frame, 0, -banner.frame.size.height);
-        [UIView commitAnimations];
-        self.bannerIsVisible = YES;
-        CGRect frame = banner.frame;
+        self.iBannerShouldBeVisible = YES;
+        if (self.gBannerView) {
+            [self removeGADBannerAndLoadIAdOnCompletion:YES];
+        } else {
+            [self positionIAdBannerWithAnimation:YES];
+        }
     }
 }
 
 - (void)bannerView:(ADBannerView *)banner didFailToReceiveAdWithError:(NSError *)error
 {
-    if (self.bannerIsVisible)
+    if (self.iBannerShouldBeVisible)
     {
-        [UIView beginAnimations:@"animateAdBannerOff" context:NULL];
-        // Assumes the banner view is placed at the bottom of the screen.
-        banner.frame = CGRectOffset(banner.frame, 0, banner.frame.size.height);
-        [UIView commitAnimations];
-        self.bannerIsVisible = NO;
+        self.iBannerShouldBeVisible = NO;
+        [self positionIAdBannerWithAnimation:YES];
     }
+    [self addGADBanner];
 }
 
 - (BOOL)bannerViewActionShouldBegin:(ADBannerView *)banner willLeaveApplication:(BOOL)willLeave
@@ -93,17 +82,86 @@ static BOOL _isABannerLoaded;
 
 -(void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation
 {
+    [self positionIAdBannerWithAnimation:NO];
+}
+
+-(void)positionIAdBannerWithAnimation:(BOOL)shouldBeAnimated
+{
+    shouldBeAnimated = YES;
     CGFloat xPos = 0;
-    CGFloat width = self.bannerView.bounds.size.width;
-    CGFloat height = self.bannerView.bounds.size.height;
+    CGFloat width = self.iBannerView.bounds.size.width;
+    CGFloat height = self.iBannerView.bounds.size.height;
     CGFloat yPos;
     
-    if (self.bannerIsVisible)
+    if (self.iBannerShouldBeVisible)
     {
-        yPos = self.view.bounds.size.height - self.bannerView.bounds.size.height;
+        yPos = self.view.bounds.size.height - self.iBannerView.bounds.size.height;
     } else {
         yPos = self.view.bounds.size.height;
     }
-    self.bannerView.frame = CGRectMake(xPos,yPos,width,height);
+    
+    if (shouldBeAnimated) {
+        [UIView animateWithDuration:0.5 animations:^{
+            self.iBannerView.frame = CGRectMake(xPos,yPos,width,height);
+        }];
+    } else {
+         self.iBannerView.frame = CGRectMake(xPos,yPos,width,height);
+    }
+}
+
+#pragma mark Helping parent view with their sizing
+-(CGFloat)currentHeightOfAd
+{
+    return self.iBannerView.frame.size.height;
+}
+
+#pragma mark GADBAnner
+-(void)addGADBanner
+{
+    if (self.gBannerView) {
+        [self.gBannerView removeFromSuperview];
+        self.gBannerView = nil;
+    }
+    // 2
+    CGRect endFrame = CGRectMake(0.0,0.0,
+                                       GAD_SIZE_320x50.width,
+                                       GAD_SIZE_320x50.height);
+    CGRect startFrame = CGRectOffset(endFrame, 0, self.view.bounds.size.height);
+    self.gBannerView = [[GADBannerView alloc]
+                        initWithFrame:startFrame];
+    // 3
+    self.gBannerView.adUnitID = @"a15120bb117925d";
+    self.gBannerView.rootViewController = self;
+    self.gBannerView.delegate = self;
+    // 4
+    [self.view addSubview:self.gBannerView];
+    [self.gBannerView loadRequest:[GADRequest request]];
+    
+    [UIView animateWithDuration:0.5 animations:^(void){
+        self.gBannerView.frame = endFrame;
+    }];
+}
+
+-(void)removeGADBannerAndLoadIAdOnCompletion:(BOOL)shouldIadLoad
+{
+    CGFloat newXpos = -(self.gBannerView.frame.size.width + self.gBannerView.frame.origin.x);
+    [UIView animateWithDuration:0.5
+                     animations:^{
+        self.gBannerView.frame = CGRectMake(newXpos,
+                                            self.gBannerView.frame.origin.y,
+                                            self.gBannerView.frame.size.width,
+                                            self.gBannerView.frame.size.height);}
+                     completion:^(BOOL finished){
+                         [self.gBannerView removeFromSuperview];
+                         self.gBannerView = nil;
+                         
+                         if (shouldIadLoad) {
+                             [self positionIAdBannerWithAnimation:YES];
+                         }
+                     }];
+}
+
+- (void)adView:(GADBannerView *)view didFailToReceiveAdWithError:(GADRequestError *)error {
+    [self removeGADBannerAndLoadIAdOnCompletion:NO];
 }
 @end

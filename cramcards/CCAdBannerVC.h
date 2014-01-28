@@ -8,13 +8,18 @@
 
 #import <UIKit/UIKit.h>
 #import <iAd/iAd.h>
+#import "GADBannerView.h"
 
 
 #define SHOULD_INCLUDE_BANNER YES
 
-@interface CCAdBannerVC : UIViewController <ADBannerViewDelegate>
+@interface CCAdBannerVC : UIViewController <ADBannerViewDelegate, GADBannerViewDelegate>
 
-@property (strong) IBOutlet ADBannerView *bannerView;
-@property (assign) BOOL bannerIsVisible;
+@property (strong) ADBannerView *iBannerView;
+@property (strong) GADBannerView *gBannerView;
+
+@property (assign) BOOL iBannerShouldBeVisible;
+
+-(CGFloat)currentHeightOfAd;
 
 @end

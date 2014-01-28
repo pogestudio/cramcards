@@ -12,6 +12,12 @@
 
 #import "CCInAppPurchaseManager.h"
 
+#import "ATConnect.h"
+#import "ATAppRatingFlow.h"
+#import "Flurry.h"
+
+#define APP_ID @"com.pogestudio.cramcards"
+
 @implementation CCAppDelegate
 
 @synthesize managedObjectContext = _managedObjectContext;
@@ -30,6 +36,9 @@
     
     //initialize the shared inappmanager to create a payment observer (registers in the init)
     [CCInAppPurchaseManager sharedInstance];
+    
+    [self startApptentiveWithStartController:navigationController];
+    [self initiateFlurry];
     return YES;
 }
 							
@@ -52,7 +61,14 @@
 
 - (void)applicationDidBecomeActive:(UIApplication *)application
 {
-    // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+    UITabBarController *tabbarC = (UITabBarController*)self.window.rootViewController;
+    UIViewController *selectedVC = [tabbarC selectedViewController];
+    if ([selectedVC isKindOfClass:[UINavigationController class]]) {
+        UINavigationController *navCon = (UINavigationController*)selectedVC;
+        selectedVC = navCon.topViewController;
+    }
+    
+    [self restartApptentiveInViewController:selectedVC];
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application
@@ -156,4 +172,39 @@
     return [[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] lastObject];
 }
 
+#pragma mark Apptentive
+-(void)startApptentiveWithStartController:(UIViewController*)startVC
+{
+    NSString *kApptentiveAPIKey =
+    @"f37ac3d0e873e98c3f74193c3b59477dcb65b7fd5ce612c4d29b0cbeafe1870e";
+    ATConnect *connection = [ATConnect sharedConnection];
+    connection.apiKey = kApptentiveAPIKey;
+    
+    ATAppRatingFlow *sharedFlow =
+    [ATAppRatingFlow sharedRatingFlowWithAppID:APP_ID];
+    
+    [sharedFlow appDidLaunch:YES viewController:startVC];
+}
+-(void)restartApptentiveInViewController:(UIViewController*)restartVC
+{
+    ATAppRatingFlow *sharedFlow =
+    [ATAppRatingFlow sharedRatingFlowWithAppID:APP_ID];
+    [sharedFlow appDidEnterForeground:YES viewController:restartVC];
+}
+
+#pragma mark Flurry
+-(void)initiateFlurry
+{
+    NSString *flurryApiKey = @"H9J5PTFJ3TZ8PRTFFN74";
+    [Flurry startSession:flurryApiKey];
+    UITabBarController *tabbarC = (UITabBarController*)self.window.rootViewController;
+    NSAssert1([tabbarC isKindOfClass:[UITabBarController class]], @"wrong class, should be tabbar", nil);
+    [Flurry logAllPageViews:tabbarC];
+    NSSetUncaughtExceptionHandler(&uncaughtExceptionHandler);
+
+}
+
+void uncaughtExceptionHandler(NSException *exception) {
+    [Flurry logError:@"Uncaugh Errorrrrr" message:@"Crash!" exception:exception];
+}
 @end

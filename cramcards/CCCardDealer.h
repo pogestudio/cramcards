@@ -25,6 +25,8 @@
 
 -(void)deckIsComplete;
 
+-(BOOL)isCurrentCardDone;
+
 -(NSUInteger)userPrefCorrectRequirement;
 -(NSUInteger)numberOfCompletedCards;
 

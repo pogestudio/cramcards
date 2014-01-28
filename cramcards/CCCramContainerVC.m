@@ -41,7 +41,7 @@
 
 -(void)viewWillAppear:(BOOL)animated
 {
-
+    [super viewWillAppear:animated];
     CCCramCardVC *firstVC = [self getCurrentCramCardVC];
     firstVC.dataForView = [self.dealer nextCard];
     firstVC.shouldShowQuestion = YES;
@@ -52,6 +52,11 @@
     [sessionVC updateView];
     
     [self setUpFlashView];
+    
+//    CGFloat heightOfAdView = self.adView.frame.size.height;
+//    CGFloat currentCramHeight = self.cramView.frame.size.height;
+//    CGFloat newHeightOfCramFrame = currentCramHeight - heightOfAdView;
+//    self.cramView.bounds = CGRectMake(0,0,self.cramView.frame.size.width,newHeightOfCramFrame);
 }
 
 - (void)didReceiveMemoryWarning
@@ -69,26 +74,37 @@
 
 -(void)setUpFlashView
 {
-    _flashColorView = [[UIView alloc] initWithFrame:[UIScreen mainScreen].bounds];
-    [_flashColorView setBackgroundColor:[UIColor clearColor]];
-    _flashColorView.userInteractionEnabled = NO;
+    self.flashColorView = [[UIView alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    [self.flashColorView setBackgroundColor:[UIColor clearColor]];
+    self.flashColorView.userInteractionEnabled = NO;
     CGFloat alpha = 0.5;
-    [_flashColorView setAlpha:alpha];
-    [self.view addSubview:_flashColorView];
+    [self.flashColorView setAlpha:alpha];
+    [self.view addSubview:self.flashColorView];
 }
 
 -(void)viewDidLayoutSubviews
 {
-    _flashColorView.frame = [self getCurrentSessionVC].view.frame;
+    self.flashColorView.frame = [self getCurrentSessionVC].view.frame;
+    
 }
 
 #pragma mark InAppPurchase
 -(void)removeAdsIfUserHasPaid
 {
+
     BOOL shouldRemoveAds = [InAppPurchaseDetails shouldAdvertisementsBeRemoved];
     if (shouldRemoveAds) {
-        [_adView removeFromSuperview];
+        [UIView animateWithDuration:0.5
+                         animations:^{
+            self.adView.frame = CGRectOffset(self.adView.frame, 0, self.adView.frame.size.height); }
+                         completion:^(BOOL finished){
+                             [self.adView removeFromSuperview];
+                                 self.adView = nil;
+                             [[self getCurrentBanner] removeFromParentViewController];
+                         }];
+
     }
+        self.adsAreShown = !shouldRemoveAds;
 }
 
 #pragma mark Transitions
@@ -104,7 +120,6 @@
 
 -(void)flipTransitionFrom:(UIViewController*)oldVC to:(UIViewController*)newVC
 {
-    CGRect newVcCurrentFrame = newVC.view.frame;
     [self transitionFromViewController:oldVC
                       toViewController:newVC
                               duration:0.15
@@ -112,6 +127,10 @@
                             animations:nil
                             completion:^(BOOL finished)
      {
+         if (self.adsAreShown) {
+             CGFloat heightOfAd = [[self getCurrentBanner] currentHeightOfAd];
+             [((CCCramCardVC*)newVC) adjustViewForBottombarOfHeight:heightOfAd];
+         }
          [oldVC removeFromParentViewController];
      }];
 }
@@ -196,12 +215,12 @@
     NSTimeInterval flashDuration = 0.2;
     [UIView animateWithDuration:flashDuration
                      animations:^{
-                         [_flashColorView setBackgroundColor:colorToFlash];
+                         [self.flashColorView setBackgroundColor:colorToFlash];
                      } completion:^(BOOL finished) {
                          
                          [UIView animateWithDuration:flashDuration
                                           animations:^{
-                             [_flashColorView setBackgroundColor:[UIColor clearColor]];
+                             [self.flashColorView setBackgroundColor:[UIColor clearColor]];
                          }];
                          
                      }];
@@ -217,6 +236,11 @@
 {
     [self flashColorForUserAnswerCorrectOrNot:userKnew];
     [self.dealer userKnewAnswer:userKnew];
+    
+    if ([self.dealer isCurrentCardDone]) {
+        [self flashDoneOnScreen];
+    }
+    
 }
 
 -(void)presentNextCard
@@ -229,10 +253,22 @@
     [self.dealer markCardAsKnown];
 }
 
-#pragma mark Check purchases
--(BOOL)userHasPurchasedAdRemoval
+#pragma mark Card Screen Related
+-(void)flashDoneOnScreen
 {
+    self.cardDone.font = [UIFont boldSystemFontOfSize:30];
+    self.cardDone.transform = CGAffineTransformScale(self.cardDone.transform, 0.25, 0.25);
+    self.cardDone.alpha = 1;
+    [self.view addSubview:self.cardDone];
+    [UIView animateWithDuration:0.5 animations:^{
+        self.cardDone.alpha = 0.2;
+        self.cardDone.transform = CGAffineTransformScale(self.cardDone.transform, 4, 4);
+    } completion:^(BOOL finished){
+        self.cardDone.alpha = 0;
+        
+    }];
     
 }
+
 
 @end

@@ -30,4 +30,6 @@
 
 @property (weak) id<CardInteractionDelegate> delegate;
 
+-(void)adjustViewForBottombarOfHeight:(CGFloat)pixelsToMoveContentUp;
+
 @end

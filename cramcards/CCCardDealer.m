@@ -100,8 +100,11 @@
 
     CCCardDataForShow *returnCard;
     NSUInteger sliceSize = [self userPrefSliceSize];
-    //if there are less than the sliceSize, then present the next unanswered card after the current card
-    if (numberOfUnanswered < sliceSize) {
+    //if there are less than the sliceSize'
+    //and it's not the last one
+    //then present the next unanswered card after the current card
+    BOOL thisIsTheLastObject = self.currentCard == [self.cardsInDataFormat lastObject];
+    if (numberOfUnanswered < sliceSize && !thisIsTheLastObject) {
         returnCard = [self firstIncompleteCardFrom:self.currentCard];
     } else {
         returnCard = [self firstIncompleteCardFrom:nil];
@@ -137,8 +140,7 @@
         indexOfStartingPoint = [self.cardsInDataFormat indexOfObject:startingPoint] + 1;
     } else {
         indexOfStartingPoint = 0;
-    }
-    
+    }    
     CCCardDataForShow *incompletlyAnswered;
     for (NSUInteger index = indexOfStartingPoint; index < [self.cardsInDataFormat count]; index++)
     {
@@ -156,6 +158,12 @@
     NSUInteger numberOfTimesEachCardShouldBeAnswered = [self userPrefCorrectRequirement];
     BOOL isCorrectlyAnswered = card.correctlyAnswered == numberOfTimesEachCardShouldBeAnswered;
     return isCorrectlyAnswered;
+}
+
+-(BOOL)isCurrentCardDone
+{
+    BOOL currentCardIsDone = [self isCardCorrectlyAnswered:self.currentCard];
+    return currentCardIsDone;
 }
 
 

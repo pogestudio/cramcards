@@ -23,7 +23,7 @@
     // Set the frame of the label to the targeted rectangle
     
     //DEBUG
-    NSString *stringInLabel = self.text;
+    //NSString *stringInLabel = self.text;
     
     label.frame = labelRect;
     
