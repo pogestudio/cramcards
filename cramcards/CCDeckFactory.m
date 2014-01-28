@@ -38,8 +38,6 @@ static CCDeckFactory *_sharedFactory;
     }
     
     NSUInteger numberOfCardsAdded = [deck.cards count];
-    NSNumber *numberFromSite = [dictWithDeck objectForKey:@"card_count"];
-    NSAssert1(numberOfCardsAdded == [numberFromSite intValue], @"not same amount of cards added as deck originally contained", nil);
     deck.numberOfCards = [NSNumber numberWithInt:numberOfCardsAdded];
     deck.title = [dictWithDeck objectForKey:@"title"];
     [CCDatabaseInterface saveDatabase];
@@ -69,8 +67,6 @@ static CCDeckFactory *_sharedFactory;
     }
     
     NSUInteger numberOfCardsAdded = [deck.cards count];
-    NSNumber *numberFromSite = [dictWithDeck objectForKey:@"term_count"];
-    NSAssert1(numberOfCardsAdded == [numberFromSite intValue], @"not same amount of cards added as deck originally contained", nil);
     deck.numberOfCards = [NSNumber numberWithInt:numberOfCardsAdded];
     deck.title = [dictWithDeck objectForKey:@"title"];
     [CCDatabaseInterface saveDatabase];

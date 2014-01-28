@@ -14,9 +14,6 @@
 
 @interface CCCramContainerVC : UIViewController <CardInteractionDelegate>
 {
-    @private
-    UIView *_flashColorView;
-    IBOutlet UIView *_adView;
     
 }
 
@@ -24,7 +21,14 @@
 @property (strong) NSDictionary *cramSettings;
 @property (strong) CCCardDealer *dealer;
 
--(void)presentNextCardWithCurrentCardBeingCorrectlyAnswered:(BOOL)userKnewAnser;
+@property (strong) IBOutlet UIView *adView;
+@property (strong) IBOutlet UIView *cramView;
+@property (strong) IBOutlet UIView *flashColorView;
+@property (assign) BOOL adsAreShown;
+
+#pragma mark View Related, refactor if anything else is added
+@property (strong) IBOutlet UILabel *cardDone;
+
 -(void)setUpCramForDeck:(Deck*)deckToCram withSettings:(NSDictionary*)settings;
 
 

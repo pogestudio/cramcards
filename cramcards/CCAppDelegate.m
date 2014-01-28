@@ -14,6 +14,7 @@
 
 #import "ATConnect.h"
 #import "ATAppRatingFlow.h"
+#import "Flurry.h"
 
 #define APP_ID @"com.pogestudio.cramcards"
 
@@ -37,6 +38,7 @@
     [CCInAppPurchaseManager sharedInstance];
     
     [self startApptentiveWithStartController:navigationController];
+    [self initiateFlurry];
     return YES;
 }
 							
@@ -188,5 +190,21 @@
     ATAppRatingFlow *sharedFlow =
     [ATAppRatingFlow sharedRatingFlowWithAppID:APP_ID];
     [sharedFlow appDidEnterForeground:YES viewController:restartVC];
+}
+
+#pragma mark Flurry
+-(void)initiateFlurry
+{
+    NSString *flurryApiKey = @"H9J5PTFJ3TZ8PRTFFN74";
+    [Flurry startSession:flurryApiKey];
+    UITabBarController *tabbarC = (UITabBarController*)self.window.rootViewController;
+    NSAssert1([tabbarC isKindOfClass:[UITabBarController class]], @"wrong class, should be tabbar", nil);
+    [Flurry logAllPageViews:tabbarC];
+    NSSetUncaughtExceptionHandler(&uncaughtExceptionHandler);
+
+}
+
+void uncaughtExceptionHandler(NSException *exception) {
+    [Flurry logError:@"Uncaugh Errorrrrr" message:@"Crash!" exception:exception];
 }
 @end

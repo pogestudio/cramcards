@@ -142,6 +142,14 @@ typedef enum {
                      }];
 }
 
+-(void)adjustViewForBottombarOfHeight:(CGFloat)pixelsToMoveContentUp
+{
+    [UIView animateWithDuration:0.5 animations:^{
+        self.skipThisCard.frame = CGRectOffset(self.skipThisCard.frame, 0, -pixelsToMoveContentUp);
+        self.confirmationText.frame = CGRectOffset(self.confirmationText.frame, 0, -pixelsToMoveContentUp);
+    }];
+}
+
 #pragma mark Handle Screen Taps
 -(IBAction)screenWasTapped:(id)sender
 {

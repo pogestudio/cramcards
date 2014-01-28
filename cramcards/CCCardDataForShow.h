@@ -16,8 +16,6 @@
 @property (strong) NSString *answer;
 @property (assign) NSUInteger correctlyAnswered;
 
-+(NSArray*)createDataFromDeck:(Deck*)deck settings:(NSDictionary*)settings;
-
 -(id)initWithQuestion:(NSString*)question answer:(NSString*)answer;
 
 @end
